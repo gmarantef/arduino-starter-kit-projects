@@ -1,0 +1,57 @@
+{
+    "name": "Arduino",
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "runArgs": ["--name", "arduino"],
+    "workspaceMount": "src=${localWorkspaceFolder},target=/home/arduino/workspace,type=bind",
+    "workspaceFolder": "/home/arduino/workspace",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true
+		},
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+			"plugins": "git aws common-aliases fzf F-Sy-H fzf-zsh-plugin zsh-autosuggestions zsh-syntax-highlighting",
+			"omzPlugins": "https://github.com/z-shell/F-Sy-H https://github.com/unixorn/fzf-zsh-plugin.git https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting.git"
+		}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "mhutchie.git-graph",
+                "johnpapa.vscode-peacock",
+                "timonwong.shellcheck",
+                "shd101wyy.markdown-preview-enhanced",
+                "mutantdino.resourcemonitor",
+				"platformio.platformio-ide"
+            ],
+            "settings": {
+                "editor.tabSize": 4,
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    },
+                    "zsh": {
+                        "path": "zsh"
+                    },
+                    "fish": {
+                        "path": "fish"
+                    },
+                    "tmux": {
+                        "path": "tmux",
+                        "icon": "terminal-tmux"
+                    },
+                    "pwsh": {
+                        "path": "pwsh",
+                        "icon": "terminal-powershell"
+                    }
+                },
+                "python.defaultInterpreterPath": "/home/arduino/workspace/.venv/bin"
+            }
+        }
+    }
+}

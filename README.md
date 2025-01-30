@@ -1,7 +1,16 @@
 # arduino-starter-kit-projects
-Repository for the development of Arduino projects from starter offical kit.
+Repositorio para el desarrollo de los códigos asociados a los proyectos registrados en el starter kit de arduino.
 
-These projects are 15 and they are going to be organized each one in their own folder, with some common packages for reusability code.
+## Table of Contents
+- [Contenedor](#contenedor)
+- [Uso](#uso)
+- [Despliegue](#despliegue)
 
-## Container
-The languages, libraries, plugins, etc. needed for these projects are defined in a dockerfile for environment replication.
+## Contenedor
+El repositorio dispone de un devcontainer para la creación del entorno de desarrollo y pruebas dentro de VSCode o DevPod.
+
+Está compuesto principalmente por la extensión PlatformIO, python requerido por la anterior extensión, y oh-my-zsh para la configuración de la terminal de zsh por defecto.
+
+## Uso
+
+## Despliegue
