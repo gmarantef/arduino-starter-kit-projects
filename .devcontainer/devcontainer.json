@@ -49,8 +49,7 @@
                         "path": "pwsh",
                         "icon": "terminal-powershell"
                     }
-                },
-                "python.defaultInterpreterPath": "/home/arduino/workspace/.venv/bin"
+                }
             }
         }
     }
